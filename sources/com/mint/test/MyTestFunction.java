@@ -1,12 +1,10 @@
 package com.mint.test;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 
 import com.mint.io.modbus.ModbusTCP_Connection;
-import com.mint.io.modbus.functions.ModbusTCP_Function;
 import com.mint.io.modbus.functions.ModbusTCP_WriteCoil;
 import com.mint.io.modbus.functions.ModbusTCP_WriteSingleRegister;
 
