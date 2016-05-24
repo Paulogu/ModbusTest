@@ -12,7 +12,7 @@ public class WriteCoil_UnitTest {
 		InetAddress ad = null;
 		
 		try {
-			ad = InetAddress.getByName("192.168.0.21");
+			ad = InetAddress.getByName("192.168.1.91");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
@@ -23,7 +23,7 @@ public class WriteCoil_UnitTest {
 		// define function
 		ModbusTCP_WriteCoil function = new ModbusTCP_WriteCoil();
 		function.setValue(true);
-		function.setAddress(0);
+		function.setAddress(2);
 		
 		// execute
 		connection.execute(function);

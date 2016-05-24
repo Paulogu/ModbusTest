@@ -11,7 +11,7 @@ public class ReadInputRegisters_UnitTest {
 	public static void main(String[] args) throws IOException {
 		InetAddress ad = null;
 		try {
-			ad = InetAddress.getByName("192.168.0.21");
+			ad = InetAddress.getByName("192.168.1.91");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
@@ -19,16 +19,16 @@ public class ReadInputRegisters_UnitTest {
 		connection.setUnitId(1);
 		
 		
-		int nbRegs = 4;
+		int nbRegs = 1;
 		
 		
 		// define function
-		ModbusTCP_ReadInputRegisters function = new ModbusTCP_ReadInputRegisters(0,nbRegs);
+		ModbusTCP_ReadInputRegisters function = new ModbusTCP_ReadInputRegisters(3,nbRegs);
 		
 		connection.execute(function);
 		
 		for(int i=0; i<nbRegs; i++){
-			System.out.print(function.getRegisters(i)+", ");	
+			System.out.print(function.getRegisters(i)+" ");	
 		}				
 	}
 }

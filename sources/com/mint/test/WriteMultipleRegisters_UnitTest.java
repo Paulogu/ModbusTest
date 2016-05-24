@@ -16,7 +16,7 @@ public class WriteMultipleRegisters_UnitTest {
 		
 		
 		try {
-			ad = InetAddress.getByName("192.168.0.21");
+			ad = InetAddress.getByName("192.168.1.91");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
